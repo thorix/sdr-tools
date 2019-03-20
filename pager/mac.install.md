@@ -8,8 +8,6 @@ https://github.com/pagermon/pagermon
 https://www.raspberrypi.org/forums/viewtopic.php?t=45142
 ```
 
-##You need rtl_fm and multimon-ng
-
 ### Install rtl_fm
 ```
 brew install rtl-sdr
@@ -32,9 +30,11 @@ make
 sudo cp multimon-ng /usr/local/bin/
 ```
 
-## The command
+### The command
+```
 sudo rtl_fm -f 929.634M -M fm -s 22050  | multimon-ng -t raw -a POCSAG512 -a POCSAG1200 -a POCSAG2400 -a FLEX -
+```
 
-### radio bands that worked for me:
+#### radio bands that worked for me:
 929.620M
 929.617M
